@@ -1,0 +1,28 @@
+        INP
+        STA A
+        INP
+        STA B
+        LDA B
+        BRZ ERRO
+        LDA ZERO
+        STA Q
+LOOP    LDA A
+        SUB B
+        BRP SEGUE
+        BRA FIM
+SEGUE   STA A
+        LDA Q
+        ADD UM
+        STA Q
+        BRA LOOP
+FIM     LDA Q
+        OUT
+        LDA A
+        OUT
+        HLT
+ERRO    HLT
+A       DAT 0
+B       DAT 0
+Q       DAT 0
+UM      DAT 1
+ZERO    DAT 0

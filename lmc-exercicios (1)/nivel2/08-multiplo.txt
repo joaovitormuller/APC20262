@@ -1,0 +1,24 @@
+        INP
+        STA A
+        INP
+        STA B
+        LDA B
+        BRZ NAO
+LOOP    LDA A
+        SUB B
+        BRP SEGUE
+        BRA TESTE
+SEGUE   STA A
+        BRA LOOP
+TESTE   LDA A
+        BRZ SIM
+NAO     LDA ZERO
+        OUT
+        HLT
+SIM     LDA UM
+        OUT
+        HLT
+A       DAT 0
+B       DAT 0
+UM      DAT 1
+ZERO    DAT 0

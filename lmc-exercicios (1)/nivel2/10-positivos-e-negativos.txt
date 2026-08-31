@@ -1,0 +1,23 @@
+        LDA ZERO
+        STA POS
+        STA NEG
+LOOP    INP
+        BRZ FIM
+        BRP EPOS
+        LDA NEG
+        ADD UM
+        STA NEG
+        BRA LOOP
+EPOS    LDA POS
+        ADD UM
+        STA POS
+        BRA LOOP
+FIM     LDA POS
+        OUT
+        LDA NEG
+        OUT
+        HLT
+POS     DAT 0
+NEG     DAT 0
+UM      DAT 1
+ZERO    DAT 0

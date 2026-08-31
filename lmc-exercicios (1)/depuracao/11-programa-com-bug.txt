@@ -1,0 +1,18 @@
+        LDA ZERO
+        STA SOMA
+LOOP    INP
+        STA VALOR
+        LDA SOMA
+        ADD VALOR
+        STA SOMA
+        LDA VALOR
+        ADD UM
+        BRZ FIM
+        BRA LOOP
+FIM     LDA SOMA
+        OUT
+        HLT
+SOMA    DAT 0
+VALOR   DAT 0
+UM      DAT 1
+ZERO    DAT 0

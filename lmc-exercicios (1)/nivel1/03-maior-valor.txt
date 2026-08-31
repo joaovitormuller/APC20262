@@ -1,0 +1,23 @@
+        INP
+        STA VALOR
+        ADD UM
+        BRZ VAZIO
+        LDA VALOR
+        STA MAIOR
+LOOP    INP
+        STA VALOR
+        ADD UM
+        BRZ FIM
+        LDA MAIOR
+        SUB VALOR
+        BRP LOOP
+        LDA VALOR
+        STA MAIOR
+        BRA LOOP
+FIM     LDA MAIOR
+        OUT
+        HLT
+VAZIO   HLT
+VALOR   DAT 0
+MAIOR   DAT 0
+UM      DAT 1

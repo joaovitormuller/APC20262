@@ -1,0 +1,35 @@
+        LDA ZERO
+        STA SOMA
+LOOP    INP
+        STA VALOR
+        ADD UM
+        BRZ FIM
+        LDA VALOR
+        STA T
+SOBE    LDA T
+        BRP DESCE
+        ADD DOIS
+        STA T
+        BRA SOBE
+DESCE   LDA T
+        SUB DOIS
+        BRP GUARDA
+        BRA TESTE
+GUARDA  STA T
+        BRA DESCE
+TESTE   LDA T
+        BRZ EPAR
+        BRA LOOP
+EPAR    LDA SOMA
+        ADD VALOR
+        STA SOMA
+        BRA LOOP
+FIM     LDA SOMA
+        OUT
+        HLT
+SOMA    DAT 0
+VALOR   DAT 0
+T       DAT 0
+UM      DAT 1
+DOIS    DAT 2
+ZERO    DAT 0

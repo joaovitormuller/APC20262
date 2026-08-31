@@ -1,0 +1,40 @@
+        INP
+        STA N
+        LDA UM
+        STA RES
+        LDA DOIS
+        STA I
+FORA    LDA N
+        SUB I
+        BRP MULT
+        BRA FIM
+MULT    LDA ZERO
+        STA TEMP
+        LDA I
+        STA K
+DENTRO  LDA K
+        BRZ FIMMULT
+        LDA TEMP
+        ADD RES
+        STA TEMP
+        LDA K
+        SUB UM
+        STA K
+        BRA DENTRO
+FIMMULT LDA TEMP
+        STA RES
+        LDA I
+        ADD UM
+        STA I
+        BRA FORA
+FIM     LDA RES
+        OUT
+        HLT
+N       DAT 0
+RES     DAT 0
+I       DAT 0
+K       DAT 0
+TEMP    DAT 0
+UM      DAT 1
+DOIS    DAT 2
+ZERO    DAT 0

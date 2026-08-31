@@ -1,0 +1,15 @@
+        LDA ZERO
+        STA CONT
+LOOP    INP
+        ADD UM
+        BRZ FIM
+        LDA CONT
+        ADD UM
+        STA CONT
+        BRA LOOP
+FIM     LDA CONT
+        OUT
+        HLT
+CONT    DAT 0
+UM      DAT 1
+ZERO    DAT 0

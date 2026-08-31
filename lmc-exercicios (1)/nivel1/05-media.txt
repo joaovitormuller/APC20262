@@ -1,0 +1,36 @@
+        LDA ZERO
+        STA SOMA
+        STA CONT
+        STA QUOC
+LOOP    INP
+        STA VALOR
+        ADD UM
+        BRZ FIMLEIT
+        LDA SOMA
+        ADD VALOR
+        STA SOMA
+        LDA CONT
+        ADD UM
+        STA CONT
+        BRA LOOP
+FIMLEIT LDA CONT
+        BRZ VAZIO
+DIV     LDA SOMA
+        SUB CONT
+        BRP SEGUE
+        BRA MOSTRA
+SEGUE   STA SOMA
+        LDA QUOC
+        ADD UM
+        STA QUOC
+        BRA DIV
+MOSTRA  LDA QUOC
+        OUT
+        HLT
+VAZIO   HLT
+SOMA    DAT 0
+CONT    DAT 0
+QUOC    DAT 0
+VALOR   DAT 0
+UM      DAT 1
+ZERO    DAT 0
