@@ -1,0 +1,16 @@
+var grass = createSprite(200,200);
+grass.setAnimation("floating_grass");
+var alien = createSprite(180,100);
+alien.setAnimation("alien");
+alien.scale = 1.3;
+var robot = createSprite(300,300);
+robot.setAnimation("robot");
+robot.scale = 0.2;
+drawSprites();
+drawSprites();
+fill("white");
+textSize(28);
+text("planeta flutuante", 20, 40);
+fill("blue");
+textSize(14);
+text("O robô olha pro céu", 20, 380);

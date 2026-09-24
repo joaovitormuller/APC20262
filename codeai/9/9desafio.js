@@ -1,0 +1,21 @@
+var orangeFish = createSprite(400, randomNumber(0, 100));
+orangeFish.setAnimation("orange_fish");
+var blueFish = createSprite(250, randomNumber(0, 200));
+blueFish.setAnimation("blue_fish");
+var greenFish = createSprite(300, randomNumber(200, 300));
+greenFish.setAnimation("green_fish");
+
+function draw() {
+
+  background("navy");
+
+  orangeFish.x = orangeFish.x - 2;
+  blueFish.x = blueFish.x - 4;
+  greenFish.x = greenFish.x - 1;
+
+  orangeFish.rotation = randomNumber(-8, 8);
+  blueFish.rotation = randomNumber(-8, 8);
+  greenFish.rotation = randomNumber(-8, 8);
+
+  drawSprites();
+}
