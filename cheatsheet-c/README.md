@@ -1,6 +1,6 @@
 # Exercícios de C
 
-Exercícios de linguagem C desenvolvidos na graduação em Ciência da Computação, com execução passo a passo no [PythonTutor](https://pythontutor.com/c.html) para observar variáveis, pilha de chamadas (*stack*) e heap.
+Exercícios de linguagem C desenvolvidos em APC, com execução passo a passo no [PythonTutor](https://pythontutor.com/c.html) para observar variáveis, pilha de chamadas (*stack*) e heap.
 
 Cada pasta contém o código-fonte (`main.c`) e um `README.md` com a descrição do exercício, a saída obtida, as observações da execução e uma conclusão.
 
